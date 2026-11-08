@@ -10,6 +10,7 @@
       "month_number": 3,
       "period": "2026-03",
       "units": -55.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -30,6 +31,7 @@
       "month_number": 4,
       "period": "2026-04",
       "units": 14.0,
+      "price_per_unit": 794.5,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 938.0,
@@ -50,6 +52,7 @@
       "month_number": 8,
       "period": "2026-08",
       "units": 295.0,
+      "price_per_unit": 77.4407,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 17995.0,
@@ -70,6 +73,7 @@
       "month_number": 12,
       "period": "2024-12",
       "units": -62.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -90,6 +94,7 @@
       "month_number": 10,
       "period": "2024-10",
       "units": -168.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -110,6 +115,7 @@
       "month_number": 8,
       "period": "2024-08",
       "units": -151.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -130,6 +136,7 @@
       "month_number": 2,
       "period": "2026-02",
       "units": -56.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -150,6 +157,7 @@
       "month_number": 11,
       "period": "2024-11",
       "units": -9.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -170,6 +178,7 @@
       "month_number": 6,
       "period": "2025-06",
       "units": 191.0,
+      "price_per_unit": 80.0995,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 10314.0,
@@ -190,6 +199,7 @@
       "month_number": 9,
       "period": "2025-09",
       "units": 92.0,
+      "price_per_unit": 110.8043,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 5244.0,
@@ -210,6 +220,7 @@
       "month_number": 5,
       "period": "2026-05",
       "units": 526.0,
+      "price_per_unit": 73.2205,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 33664.0,
@@ -230,6 +241,7 @@
       "month_number": 1,
       "period": "2026-01",
       "units": 175.0,
+      "price_per_unit": 91.7143,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 11200.0,
@@ -250,6 +262,7 @@
       "month_number": 10,
       "period": "2025-10",
       "units": 52.0,
+      "price_per_unit": 159.1923,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 3328.0,
@@ -270,6 +283,7 @@
       "month_number": 11,
       "period": "2025-11",
       "units": -58.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -290,6 +304,7 @@
       "month_number": 1,
       "period": "2025-01",
       "units": -30.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -310,6 +325,7 @@
       "month_number": 6,
       "period": "2024-06",
       "units": 326.0,
+      "price_per_unit": 69.7025,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 20538.0,
@@ -330,6 +346,7 @@
       "month_number": 12,
       "period": "2025-12",
       "units": 103.0,
+      "price_per_unit": 107.0874,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 6180.0,
@@ -350,6 +367,7 @@
       "month_number": 7,
       "period": "2024-07",
       "units": 154.0,
+      "price_per_unit": 83.1883,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 10626.0,
@@ -370,6 +388,7 @@
       "month_number": 3,
       "period": "2025-03",
       "units": -59.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -390,6 +409,7 @@
       "month_number": 5,
       "period": "2024-05",
       "units": -2837.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -410,6 +430,7 @@
       "month_number": 9,
       "period": "2024-09",
       "units": -173.0,
+      "price_per_unit": null,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 0.0,
@@ -430,6 +451,7 @@
       "month_number": 5,
       "period": "2025-05",
       "units": 129.0,
+      "price_per_unit": 94.6434,
       "exported_units": null,
       "credit": 0.0,
       "base_bill": 7224.0,
@@ -441,6 +463,724 @@
         "Society Charges": 4985.0,
         "Credit": 0.0
       }
+    },
+    {
+      "id": "GAS-2024-08",
+      "utility": "Gas",
+      "year": 2024,
+      "month": "August",
+      "month_number": 8,
+      "period": "2024-08",
+      "units": 0.489,
+      "price_per_unit": 6501.0225,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 3179.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 3179.0,
+      "charges": {
+        "Gas Charges": 1127.0,
+        "Extra Charges": 2052.0,
+        "Meter Rent": 44.0,
+        "Fixed Charges": 1100.0,
+        "GST": 408.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": 0.0
+      }
+    },
+    {
+      "id": "GAS-2024-09",
+      "utility": "Gas",
+      "year": 2024,
+      "month": "September",
+      "month_number": 9,
+      "period": "2024-09",
+      "units": 0.826,
+      "price_per_unit": 6076.2712,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 5019.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 5019.0,
+      "charges": {
+        "Gas Charges": 2790.0,
+        "Extra Charges": 2229.0,
+        "Meter Rent": 40.0,
+        "Fixed Charges": 1000.0,
+        "GST": 689.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": 0.0
+      }
+    },
+    {
+      "id": "GAS-2024-12",
+      "utility": "Gas",
+      "year": 2024,
+      "month": "December",
+      "month_number": 12,
+      "period": "2024-12",
+      "units": 2.039,
+      "price_per_unit": 7794.9975,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 15894.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 15894.0,
+      "charges": {
+        "Gas Charges": 10939.0,
+        "Extra Charges": 4955.0,
+        "Meter Rent": 41.0,
+        "Fixed Charges": 2066.0,
+        "GST": 2348.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": 0.0
+      }
+    },
+    {
+      "id": "GAS-2025-09",
+      "utility": "Gas",
+      "year": 2025,
+      "month": "September",
+      "month_number": 9,
+      "period": "2025-09",
+      "units": 0.359,
+      "price_per_unit": 7752.0891,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2783.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2783.0,
+      "charges": {
+        "Gas Charges": 770.0,
+        "Extra Charges": 2013.0,
+        "Meter Rent": 41.0,
+        "Fixed Charges": 1550.0,
+        "GST": 425.0,
+        "Rebate": 0.0,
+        "Security Deposit": 0.0,
+        "Arrears": -3.0
+      }
+    },
+    {
+      "id": "GAS-2025-07",
+      "utility": "Gas",
+      "year": 2025,
+      "month": "July",
+      "month_number": 7,
+      "period": "2025-07",
+      "units": 0.225,
+      "price_per_unit": 11937.7778,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2686.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2686.0,
+      "charges": {
+        "Gas Charges": 409.0,
+        "Extra Charges": 2277.0,
+        "Meter Rent": 40.0,
+        "Fixed Charges": 1400.0,
+        "GST": 332.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": 5.0
+      }
+    },
+    {
+      "id": "GAS-2024-10",
+      "utility": "Gas",
+      "year": 2024,
+      "month": "October",
+      "month_number": 10,
+      "period": "2024-10",
+      "units": 0.744,
+      "price_per_unit": 6149.1935,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 4575.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4575.0,
+      "charges": {
+        "Gas Charges": 2416.0,
+        "Extra Charges": 2159.0,
+        "Meter Rent": 40.0,
+        "Fixed Charges": 1000.0,
+        "GST": 622.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": -3.0
+      }
+    },
+    {
+      "id": "GAS-2025-06",
+      "utility": "Gas",
+      "year": 2025,
+      "month": "June",
+      "month_number": 6,
+      "period": "2025-06",
+      "units": 0.184,
+      "price_per_unit": 11706.5217,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2154.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2154.0,
+      "charges": {
+        "Gas Charges": 328.0,
+        "Extra Charges": 1826.0,
+        "Meter Rent": 41.0,
+        "Fixed Charges": 1033.0,
+        "GST": 253.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": -1.0
+      }
+    },
+    {
+      "id": "GAS-2025-03",
+      "utility": "Gas",
+      "year": 2025,
+      "month": "March",
+      "month_number": 3,
+      "period": "2025-03",
+      "units": 0.928,
+      "price_per_unit": 5977.3707,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 5547.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 5547.0,
+      "charges": {
+        "Gas Charges": 3270.0,
+        "Extra Charges": 2277.0,
+        "Meter Rent": 39.0,
+        "Fixed Charges": 966.0,
+        "GST": 770.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": 2.0
+      }
+    },
+    {
+      "id": "GAS-2025-12",
+      "utility": "Gas",
+      "year": 2025,
+      "month": "December",
+      "month_number": 12,
+      "period": "2025-12",
+      "units": 1.895,
+      "price_per_unit": 8352.5066,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 15828.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 15828.0,
+      "charges": {
+        "Gas Charges": 10376.0,
+        "Extra Charges": 5452.0,
+        "Meter Rent": 40.0,
+        "Fixed Charges": 3000.0,
+        "GST": 2415.0,
+        "Rebate": 0.0,
+        "Security Deposit": 0.0,
+        "Arrears": -3.0
+      }
+    },
+    {
+      "id": "GAS-2026-09",
+      "utility": "Gas",
+      "year": 2026,
+      "month": "September",
+      "month_number": 9,
+      "period": "2026-09",
+      "units": 0.256,
+      "price_per_unit": 9640.625,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2468.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2468.0,
+      "charges": {
+        "Gas Charges": 446.0,
+        "Extra Charges": 2022.0,
+        "Meter Rent": 43.0,
+        "Fixed Charges": 1600.0,
+        "GST": 376.0,
+        "Rebate": 0.0,
+        "Security Deposit": 0.0,
+        "Arrears": 3.0
+      }
+    },
+    {
+      "id": "GAS-2025-01",
+      "utility": "Gas",
+      "year": 2025,
+      "month": "January",
+      "month_number": 1,
+      "period": "2025-01",
+      "units": 3.08,
+      "price_per_unit": 9328.2468,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 28731.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 28731.0,
+      "charges": {
+        "Gas Charges": 36610.0,
+        "Extra Charges": -7879.0,
+        "Meter Rent": 40.0,
+        "Fixed Charges": 2000.0,
+        "GST": 6957.0,
+        "Rebate": 0.0,
+        "Security Deposit": 500.0,
+        "Arrears": -17376.0
+      }
+    },
+    {
+      "id": "GAS-2026-08",
+      "utility": "Gas",
+      "year": 2026,
+      "month": "August",
+      "month_number": 8,
+      "period": "2026-08",
+      "units": 0.246,
+      "price_per_unit": 9402.439,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2313.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2313.0,
+      "charges": {
+        "Gas Charges": 424.0,
+        "Extra Charges": 1889.0,
+        "Meter Rent": 40.0,
+        "Fixed Charges": 1500.0,
+        "GST": 354.0,
+        "Rebate": 0.0,
+        "Security Deposit": 0.0,
+        "Arrears": -5.0
+      }
+    },
+    {
+      "id": "GAS-2024-06",
+      "utility": "Gas",
+      "year": 2024,
+      "month": "June",
+      "month_number": 6,
+      "period": "2024-06",
+      "units": 0.306,
+      "price_per_unit": 6454.2484,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 1975.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 1975.0,
+      "charges": {
+        "Gas Charges": 600.0,
+        "Extra Charges": 1375.0,
+        "Meter Rent": 41.0,
+        "Fixed Charges": 1033.0,
+        "GST": 301.0,
+        "Rebate": 0.0,
+        "Security Deposit": 0.0,
+        "Arrears": 0.0
+      }
+    },
+    {
+      "id": "WATER-2024-10",
+      "utility": "Water",
+      "year": 2024,
+      "month": "October",
+      "month_number": 10,
+      "period": "2024-10",
+      "units": 22000.0,
+      "price_per_unit": 0.1284,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2824.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2824.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2824.0
+      }
+    },
+    {
+      "id": "WATER-2026-03",
+      "utility": "Water",
+      "year": 2026,
+      "month": "March",
+      "month_number": 3,
+      "period": "2026-03",
+      "units": 21120.0,
+      "price_per_unit": 0.1323,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2794.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2794.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2794.0
+      }
+    },
+    {
+      "id": "WATER-2026-08",
+      "utility": "Water",
+      "year": 2026,
+      "month": "August",
+      "month_number": 8,
+      "period": "2026-08",
+      "units": 18700.0,
+      "price_per_unit": 0.1456,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2722.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2722.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2722.0
+      }
+    },
+    {
+      "id": "WATER-2026-02",
+      "utility": "Water",
+      "year": 2026,
+      "month": "February",
+      "month_number": 2,
+      "period": "2026-02",
+      "units": 43560.0,
+      "price_per_unit": 0.0817,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 3559.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 3559.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 3559.0
+      }
+    },
+    {
+      "id": "WATER-2026-05",
+      "utility": "Water",
+      "year": 2026,
+      "month": "May",
+      "month_number": 5,
+      "period": "2026-05",
+      "units": 22000.0,
+      "price_per_unit": 0.1284,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2824.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2824.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2824.0
+      }
+    },
+    {
+      "id": "WATER-2025-05",
+      "utility": "Water",
+      "year": 2025,
+      "month": "May",
+      "month_number": 5,
+      "period": "2025-05",
+      "units": 55000.0,
+      "price_per_unit": 0.0718,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 3950.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 3950.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 3950.0
+      }
+    },
+    {
+      "id": "WATER-2024-09",
+      "utility": "Water",
+      "year": 2024,
+      "month": "September",
+      "month_number": 9,
+      "period": "2024-09",
+      "units": 22000.0,
+      "price_per_unit": 0.1284,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2824.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2824.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2824.0
+      }
+    },
+    {
+      "id": "WATER-2024-05",
+      "utility": "Water",
+      "year": 2024,
+      "month": "May",
+      "month_number": 5,
+      "period": "2024-05",
+      "units": 19800.0,
+      "price_per_unit": 0.1389,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2750.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2750.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2750.0
+      }
+    },
+    {
+      "id": "WATER-2024-07",
+      "utility": "Water",
+      "year": 2024,
+      "month": "July",
+      "month_number": 7,
+      "period": "2024-07",
+      "units": 22000.0,
+      "price_per_unit": 0.1284,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2824.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2824.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2824.0
+      }
+    },
+    {
+      "id": "WATER-2025-03",
+      "utility": "Water",
+      "year": 2025,
+      "month": "March",
+      "month_number": 3,
+      "period": "2025-03",
+      "units": 58300.0,
+      "price_per_unit": 0.0697,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 4063.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4063.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 4063.0
+      }
+    },
+    {
+      "id": "WATER-2025-12",
+      "utility": "Water",
+      "year": 2025,
+      "month": "December",
+      "month_number": 12,
+      "period": "2025-12",
+      "units": 42460.0,
+      "price_per_unit": 0.0829,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 3522.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 3522.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 3522.0
+      }
+    },
+    {
+      "id": "WATER-2025-10",
+      "utility": "Water",
+      "year": 2025,
+      "month": "October",
+      "month_number": 10,
+      "period": "2025-10",
+      "units": 17600.0,
+      "price_per_unit": 0.153,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2693.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2693.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2693.0
+      }
+    },
+    {
+      "id": "WATER-2025-11",
+      "utility": "Water",
+      "year": 2025,
+      "month": "November",
+      "month_number": 11,
+      "period": "2025-11",
+      "units": 17820.0,
+      "price_per_unit": 0.1515,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2699.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2699.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2699.0
+      }
+    },
+    {
+      "id": "WATER-2026-01",
+      "utility": "Water",
+      "year": 2026,
+      "month": "January",
+      "month_number": 1,
+      "period": "2026-01",
+      "units": 33000.0,
+      "price_per_unit": 0.0969,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 3199.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 3199.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 3199.0
+      }
+    },
+    {
+      "id": "WATER-2025-09",
+      "utility": "Water",
+      "year": 2025,
+      "month": "September",
+      "month_number": 9,
+      "period": "2025-09",
+      "units": 20240.0,
+      "price_per_unit": 0.1366,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2764.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2764.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2764.0
+      }
+    },
+    {
+      "id": "WATER-2025-06",
+      "utility": "Water",
+      "year": 2025,
+      "month": "June",
+      "month_number": 6,
+      "period": "2025-06",
+      "units": 57200.0,
+      "price_per_unit": 0.0704,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 4025.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4025.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 4025.0
+      }
+    },
+    {
+      "id": "WATER-2024-11",
+      "utility": "Water",
+      "year": 2024,
+      "month": "November",
+      "month_number": 11,
+      "period": "2024-11",
+      "units": 20900.0,
+      "price_per_unit": 0.1333,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2787.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2787.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2787.0
+      }
+    },
+    {
+      "id": "WATER-2026-04",
+      "utility": "Water",
+      "year": 2026,
+      "month": "April",
+      "month_number": 4,
+      "period": "2026-04",
+      "units": 42680.0,
+      "price_per_unit": 0.0829,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 3539.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 3539.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 3539.0
+      }
+    },
+    {
+      "id": "WATER-2024-08",
+      "utility": "Water",
+      "year": 2024,
+      "month": "August",
+      "month_number": 8,
+      "period": "2024-08",
+      "units": 22000.0,
+      "price_per_unit": 0.1284,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 2824.0,
+      "society_charges": 0.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2824.0,
+      "charges": {
+        "Other Charges": 0.0,
+        "Base Bill": 2824.0
+      }
     }
   ],
   "monthly_summary": [
@@ -450,17 +1190,17 @@
       "month": "May",
       "Electricity": 2185.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 2185.0
+      "Water": 2750.0,
+      "total": 4935.0
     },
     {
       "period": "2024-06",
       "year": 2024,
       "month": "June",
       "Electricity": 22723.0,
-      "Gas": 0,
+      "Gas": 1975.0,
       "Water": 0,
-      "total": 22723.0
+      "total": 24698.0
     },
     {
       "period": "2024-07",
@@ -468,35 +1208,35 @@
       "month": "July",
       "Electricity": 12811.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 12811.0
+      "Water": 2824.0,
+      "total": 15635.0
     },
     {
       "period": "2024-08",
       "year": 2024,
       "month": "August",
       "Electricity": 10766.0,
-      "Gas": 0,
-      "Water": 0,
-      "total": 10766.0
+      "Gas": 3179.0,
+      "Water": 2824.0,
+      "total": 16769.0
     },
     {
       "period": "2024-09",
       "year": 2024,
       "month": "September",
       "Electricity": 5692.0,
-      "Gas": 0,
-      "Water": 0,
-      "total": 5692.0
+      "Gas": 5019.0,
+      "Water": 2824.0,
+      "total": 13535.0
     },
     {
       "period": "2024-10",
       "year": 2024,
       "month": "October",
       "Electricity": 6035.0,
-      "Gas": 0,
-      "Water": 0,
-      "total": 6035.0
+      "Gas": 4575.0,
+      "Water": 2824.0,
+      "total": 13434.0
     },
     {
       "period": "2024-11",
@@ -504,35 +1244,35 @@
       "month": "November",
       "Electricity": 5685.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 5685.0
+      "Water": 2787.0,
+      "total": 8472.0
     },
     {
       "period": "2024-12",
       "year": 2024,
       "month": "December",
       "Electricity": 4685.0,
-      "Gas": 0,
+      "Gas": 15894.0,
       "Water": 0,
-      "total": 4685.0
+      "total": 20579.0
     },
     {
       "period": "2025-01",
       "year": 2025,
       "month": "January",
       "Electricity": 4885.0,
-      "Gas": 0,
+      "Gas": 28731.0,
       "Water": 0,
-      "total": 4885.0
+      "total": 33616.0
     },
     {
       "period": "2025-03",
       "year": 2025,
       "month": "March",
       "Electricity": 5385.0,
-      "Gas": 0,
-      "Water": 0,
-      "total": 5385.0
+      "Gas": 5547.0,
+      "Water": 4063.0,
+      "total": 14995.0
     },
     {
       "period": "2025-05",
@@ -540,26 +1280,35 @@
       "month": "May",
       "Electricity": 12209.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 12209.0
+      "Water": 3950.0,
+      "total": 16159.0
     },
     {
       "period": "2025-06",
       "year": 2025,
       "month": "June",
       "Electricity": 15299.0,
-      "Gas": 0,
+      "Gas": 2154.0,
+      "Water": 4025.0,
+      "total": 21478.0
+    },
+    {
+      "period": "2025-07",
+      "year": 2025,
+      "month": "July",
+      "Electricity": 0,
+      "Gas": 2686.0,
       "Water": 0,
-      "total": 15299.0
+      "total": 2686.0
     },
     {
       "period": "2025-09",
       "year": 2025,
       "month": "September",
       "Electricity": 10194.0,
-      "Gas": 0,
-      "Water": 0,
-      "total": 10194.0
+      "Gas": 2783.0,
+      "Water": 2764.0,
+      "total": 15741.0
     },
     {
       "period": "2025-10",
@@ -567,8 +1316,8 @@
       "month": "October",
       "Electricity": 8278.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 8278.0
+      "Water": 2693.0,
+      "total": 10971.0
     },
     {
       "period": "2025-11",
@@ -576,17 +1325,17 @@
       "month": "November",
       "Electricity": 4850.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 4850.0
+      "Water": 2699.0,
+      "total": 7549.0
     },
     {
       "period": "2025-12",
       "year": 2025,
       "month": "December",
       "Electricity": 11030.0,
-      "Gas": 0,
-      "Water": 0,
-      "total": 11030.0
+      "Gas": 15828.0,
+      "Water": 3522.0,
+      "total": 30380.0
     },
     {
       "period": "2026-01",
@@ -594,8 +1343,8 @@
       "month": "January",
       "Electricity": 16050.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 16050.0
+      "Water": 3199.0,
+      "total": 19249.0
     },
     {
       "period": "2026-02",
@@ -603,8 +1352,8 @@
       "month": "February",
       "Electricity": 4850.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 4850.0
+      "Water": 3559.0,
+      "total": 8409.0
     },
     {
       "period": "2026-03",
@@ -612,8 +1361,8 @@
       "month": "March",
       "Electricity": 4850.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 4850.0
+      "Water": 2794.0,
+      "total": 7644.0
     },
     {
       "period": "2026-04",
@@ -621,8 +1370,8 @@
       "month": "April",
       "Electricity": 11123.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 11123.0
+      "Water": 3539.0,
+      "total": 14662.0
     },
     {
       "period": "2026-05",
@@ -630,17 +1379,26 @@
       "month": "May",
       "Electricity": 38514.0,
       "Gas": 0,
-      "Water": 0,
-      "total": 38514.0
+      "Water": 2824.0,
+      "total": 41338.0
     },
     {
       "period": "2026-08",
       "year": 2026,
       "month": "August",
       "Electricity": 22845.0,
-      "Gas": 0,
+      "Gas": 2313.0,
+      "Water": 2722.0,
+      "total": 27880.0
+    },
+    {
+      "period": "2026-09",
+      "year": 2026,
+      "month": "September",
+      "Electricity": 0,
+      "Gas": 2468.0,
       "Water": 0,
-      "total": 22845.0
+      "total": 2468.0
     }
   ]
 }

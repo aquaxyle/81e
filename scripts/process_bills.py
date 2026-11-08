@@ -4,7 +4,10 @@ import json
 import calendar
 import pandas as pd
 
-# Project paths
+# ==========================================
+# PROJECT PATHS
+# ==========================================
+
 ROOT = Path(__file__).resolve().parent.parent
 EXCEL = ROOT / "data" / "bills.xlsx"
 OUTPUT = ROOT / "data" / "bills.json"
@@ -25,7 +28,7 @@ CHARGE_COLUMNS = {
     ],
     "Gas": [
         "Gas Charges",
-        "Previous Bill Adjustment",
+        "Extra Charges",
         "Meter Rent",
         "Fixed Charges",
         "GST",
@@ -34,18 +37,27 @@ CHARGE_COLUMNS = {
         "Arrears",
     ],
     "Water": [
-        "Society Charges",
-        "Water Charges",
-        "R&M",
-        "WASA Aqua Charges",
-        "Sewerage Charges",
-        "Solid Waste Charges",
         "Other Charges",
-        "Arrears",
-        "Late Surcharge",
+        "Base Bill",
     ],
 }
 
+UNITS_COLUMNS = {
+    "Electricity": "Units",
+    "Gas": "Units Consumed",
+    "Water": "Units (Gallons)",
+}
+
+PREFIXES = {
+    "Electricity": "ELEC",
+    "Gas": "GAS",
+    "Water": "WATER",
+}
+
+
+# ==========================================
+# HELPER FUNCTIONS
+# ==========================================
 
 def clean_number(value):
     if pd.isna(value) or str(value).strip() == "":
@@ -57,8 +69,13 @@ def read_utility(sheet):
     df = pd.read_excel(EXCEL, sheet_name=sheet)
     df.columns = df.columns.str.strip()
 
-    required = ["Year", "Month", "Total Bill"]
-    required += CHARGE_COLUMNS[sheet]
+    # Validate spreadsheet columns
+    required = [
+        "Year",
+        "Month",
+        "Total Bill",
+        UNITS_COLUMNS[sheet],
+    ] + CHARGE_COLUMNS[sheet]
 
     for column in required:
         if column not in df.columns:
@@ -66,10 +83,13 @@ def read_utility(sheet):
                 f"{sheet}: Missing column '{column}'"
             )
 
+    # Remove blank template rows
     df = df.dropna(subset=["Year", "Month"])
+
     records = []
 
     for _, row in df.iterrows():
+
         year = int(row["Year"])
         month_name = str(row["Month"]).strip()
         month_number = MONTHS.get(month_name.lower())
@@ -84,7 +104,7 @@ def read_utility(sheet):
                 return 0.0
             return clean_number(row[column])
 
-        # Skip rows without actual charge information.
+        # Skip incomplete records
         has_charge = any(
             pd.notna(row[column])
             for column in CHARGE_COLUMNS[sheet]
@@ -97,7 +117,10 @@ def read_utility(sheet):
             )
             continue
 
-        # Calculate the bill from its components.
+        # ==================================
+        # BILL CALCULATIONS
+        # ==================================
+
         if sheet == "Electricity":
             base = get("Base Bill")
             society = get("Society Charges")
@@ -131,40 +154,38 @@ def read_utility(sheet):
             total = base
 
         else:
-            base_components = [
-                "Society Charges",
-                "Water Charges",
-                "R&M",
-                "WASA Aqua Charges",
-                "Sewerage Charges",
-                "Solid Waste Charges",
-                "Other Charges",
-                "Arrears",
-            ]
+            # Simplified Water spreadsheet
+            base = get("Base Bill")
+            other = get("Other Charges")
 
-            base = sum(
-                get(c) for c in base_components
-            )
-
-            society = get("Society Charges")
+            society = 0.0
             credit = 0.0
-            late = get("Late Surcharge")
-            total = base + late
+            late = 0.0
 
-        # Consumption data
-        units_column = {
-            "Electricity": "Units",
-            "Gas": "Units Consumed",
-            "Water": "Units (Gallons)",
-        }[sheet]
+            total = base + other
 
-        units_value = row.get(units_column)
+        # ==================================
+        # CONSUMPTION AND UNIT PRICES
+        # ==================================
+
+        units_value = row.get(
+            UNITS_COLUMNS[sheet]
+        )
+
         units = (
-            None if pd.isna(units_value)
+            None
+            if pd.isna(units_value)
             else float(units_value)
         )
 
-        # Solar export data
+        # Effective price per unit
+        price_per_unit = (
+            round(total / units, 4)
+            if units is not None and units > 0
+            else None
+        )
+
+        # Solar exported units
         exported_value = (
             row.get("Exported Units")
             if sheet == "Electricity"
@@ -172,29 +193,35 @@ def read_utility(sheet):
         )
 
         exported_units = (
-            None if pd.isna(exported_value)
+            None
+            if pd.isna(exported_value)
             else float(exported_value)
         )
 
-        # Automatic Bill ID
-        prefix = {
-            "Electricity": "ELEC",
-            "Gas": "GAS",
-            "Water": "WATER",
-        }[sheet]
+        # ==================================
+        # BILL ID
+        # ==================================
 
         bill_id = row.get("Bill ID")
 
         if pd.isna(bill_id) or str(bill_id).strip() == "":
             bill_id = (
-                f"{prefix}-{year}-{month_number:02d}"
+                f"{PREFIXES[sheet]}-"
+                f"{year}-{month_number:02d}"
             )
 
-        # Detailed monetary breakdown
+        # ==================================
+        # DETAILED CHARGES
+        # ==================================
+
         charges = {
             column: round(get(column), 2)
             for column in CHARGE_COLUMNS[sheet]
         }
+
+        # ==================================
+        # SAVE BILL RECORD
+        # ==================================
 
         records.append({
             "id": str(bill_id),
@@ -203,18 +230,27 @@ def read_utility(sheet):
             "month": month_name,
             "month_number": month_number,
             "period": f"{year}-{month_number:02d}",
+
             "units": units,
+            "price_per_unit": price_per_unit,
+
             "exported_units": exported_units,
             "credit": round(credit, 2),
+
             "base_bill": round(base, 2),
             "society_charges": round(society, 2),
             "late_surcharge": round(late, 2),
             "total_bill": round(total, 2),
+
             "charges": charges,
         })
 
     return records
 
+
+# ==========================================
+# MONTHLY SUMMARY
+# ==========================================
 
 def create_summary(records):
     monthly = {}
@@ -234,6 +270,7 @@ def create_summary(records):
             }
 
         amount = record["total_bill"]
+
         monthly[period][record["utility"]] += amount
         monthly[period]["total"] += amount
 
@@ -249,7 +286,12 @@ def create_summary(records):
     ]
 
 
+# ==========================================
+# MAIN PROCESS
+# ==========================================
+
 def main():
+
     if not EXCEL.exists():
         raise FileNotFoundError(
             f"Workbook not found: {EXCEL}"
@@ -260,7 +302,10 @@ def main():
     for sheet in SHEETS:
         records = read_utility(sheet)
         all_records.extend(records)
-        print(f"{sheet}: {len(records)} bills loaded")
+
+        print(
+            f"{sheet}: {len(records)} bills loaded"
+        )
 
     summary = create_summary(all_records)
 
@@ -276,9 +321,17 @@ def main():
         encoding="utf-8"
     )
 
-    print(f"\nTotal bills: {len(all_records)}")
-    print(f"Monthly periods: {len(summary)}")
-    print(f"JSON created: {OUTPUT}")
+    print(
+        f"\nTotal bills: {len(all_records)}"
+    )
+
+    print(
+        f"Monthly periods: {len(summary)}"
+    )
+
+    print(
+        f"JSON created: {OUTPUT}"
+    )
 
 
 if __name__ == "__main__":
