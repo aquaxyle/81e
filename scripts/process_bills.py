@@ -17,6 +17,35 @@ MONTHS = {
     if name
 }
 
+CHARGE_COLUMNS = {
+    "Electricity": [
+        "Base Bill",
+        "Society Charges",
+        "Credit",
+    ],
+    "Gas": [
+        "Gas Charges",
+        "Previous Bill Adjustment",
+        "Meter Rent",
+        "Fixed Charges",
+        "GST",
+        "Rebate",
+        "Security Deposit",
+        "Arrears",
+    ],
+    "Water": [
+        "Society Charges",
+        "Water Charges",
+        "R&M",
+        "WASA Aqua Charges",
+        "Sewerage Charges",
+        "Solid Waste Charges",
+        "Other Charges",
+        "Arrears",
+        "Late Surcharge",
+    ],
+}
+
 
 def clean_number(value):
     if pd.isna(value) or str(value).strip() == "":
@@ -29,6 +58,7 @@ def read_utility(sheet):
     df.columns = df.columns.str.strip()
 
     required = ["Year", "Month", "Total Bill"]
+    required += CHARGE_COLUMNS[sheet]
 
     for column in required:
         if column not in df.columns:
@@ -36,9 +66,7 @@ def read_utility(sheet):
                 f"{sheet}: Missing column '{column}'"
             )
 
-    # Ignore completely empty records and template rows
-    df = df.dropna(subset=["Year", "Month"], how="any")
-
+    df = df.dropna(subset=["Year", "Month"])
     records = []
 
     for _, row in df.iterrows():
@@ -56,54 +84,10 @@ def read_utility(sheet):
                 return 0.0
             return clean_number(row[column])
 
-        # Calculate using component charges, not cached
-        # Excel formula values, which may be missing.
-        if sheet == "Electricity":
-            base = get("Base Bill")
-            society = get("Society Charges")
-            late = 0.0
-            total = base + society
-
-        elif sheet == "Gas":
-            components = [
-                "Gas Charges",
-                "Previous Bill Adjustment",
-                "Meter Rent",
-                "Fixed Charges",
-                "GST",
-                "Rebate",
-                "Security Deposit",
-                "Arrears",
-            ]
-            base = sum(get(c) for c in components)
-            society = 0.0
-            late = 0.0
-            total = base
-
-        else:
-            components = [
-                "Society Charges",
-                "Water Charges",
-                "R&M",
-                "WASA Aqua Charges",
-                "Sewerage Charges",
-                "Solid Waste Charges",
-                "Other Charges",
-                "Arrears",
-            ]
-            base = sum(get(c) for c in components)
-            society = get("Society Charges")
-            late = get("Late Surcharge")
-            total = base + late
-
-        # Do not publish empty template rows as bills
+        # Skip rows without actual charge information.
         has_charge = any(
-            pd.notna(row.get(c))
-            for c in (
-                ["Base Bill", "Society Charges"]
-                if sheet == "Electricity"
-                else components
-            )
+            pd.notna(row[column])
+            for column in CHARGE_COLUMNS[sheet]
         )
 
         if not has_charge:
@@ -113,40 +97,41 @@ def read_utility(sheet):
             )
             continue
 
-        units_column = (
-            "Units (Gallons)" if sheet == "Water"
-            else "Units Consumed" if sheet == "Gas"
-            else "Units"
-        )
+        # Calculate the bill from its components.
+        if sheet == "Electricity":
+            base = get("Base Bill")
+            society = get("Society Charges")
+            credit = get("Credit")
+            late = 0.0
 
-        units_value = row.get(units_column)
-        units = (
-            None if pd.isna(units_value)
-            else float(units_value)
-        )
+            total = max(
+                0.0,
+                base + society - credit
+            )
 
-        bill_id = row.get("Bill ID")
-        if pd.isna(bill_id):
-            bill_id = f"{sheet.upper()}-{year}-{month_number:02d}"
-
-  
-        # Preserve the individual monetary components.
-        charge_columns = {
-            "Electricity": [
-                "Base Bill",
-                "Society Charges",
-            ],
-            "Gas": [
+        elif sheet == "Gas":
+            positive_components = [
                 "Gas Charges",
                 "Previous Bill Adjustment",
                 "Meter Rent",
                 "Fixed Charges",
                 "GST",
-                "Rebate",
                 "Security Deposit",
                 "Arrears",
-            ],
-            "Water": [
+            ]
+
+            base = (
+                sum(get(c) for c in positive_components)
+                - get("Rebate")
+            )
+
+            society = 0.0
+            credit = 0.0
+            late = 0.0
+            total = base
+
+        else:
+            base_components = [
                 "Society Charges",
                 "Water Charges",
                 "R&M",
@@ -155,12 +140,60 @@ def read_utility(sheet):
                 "Solid Waste Charges",
                 "Other Charges",
                 "Arrears",
-            ],
-        }
+            ]
 
+            base = sum(
+                get(c) for c in base_components
+            )
+
+            society = get("Society Charges")
+            credit = 0.0
+            late = get("Late Surcharge")
+            total = base + late
+
+        # Consumption data
+        units_column = {
+            "Electricity": "Units",
+            "Gas": "Units Consumed",
+            "Water": "Units (Gallons)",
+        }[sheet]
+
+        units_value = row.get(units_column)
+        units = (
+            None if pd.isna(units_value)
+            else float(units_value)
+        )
+
+        # Solar export data
+        exported_value = (
+            row.get("Exported Units")
+            if sheet == "Electricity"
+            else None
+        )
+
+        exported_units = (
+            None if pd.isna(exported_value)
+            else float(exported_value)
+        )
+
+        # Automatic Bill ID
+        prefix = {
+            "Electricity": "ELEC",
+            "Gas": "GAS",
+            "Water": "WATER",
+        }[sheet]
+
+        bill_id = row.get("Bill ID")
+
+        if pd.isna(bill_id) or str(bill_id).strip() == "":
+            bill_id = (
+                f"{prefix}-{year}-{month_number:02d}"
+            )
+
+        # Detailed monetary breakdown
         charges = {
             column: round(get(column), 2)
-            for column in charge_columns[sheet]
+            for column in CHARGE_COLUMNS[sheet]
         }
 
         records.append({
@@ -171,13 +204,14 @@ def read_utility(sheet):
             "month_number": month_number,
             "period": f"{year}-{month_number:02d}",
             "units": units,
+            "exported_units": exported_units,
+            "credit": round(credit, 2),
             "base_bill": round(base, 2),
             "society_charges": round(society, 2),
             "late_surcharge": round(late, 2),
             "total_bill": round(total, 2),
             "charges": charges,
         })
-
 
     return records
 

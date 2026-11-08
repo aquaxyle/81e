@@ -1,6 +1,646 @@
 {
   "project": "81E Home Analytics",
   "currency": "PKR",
-  "bills": [],
-  "monthly_summary": []
+  "bills": [
+    {
+      "id": "ELEC-2026-03",
+      "utility": "Electricity",
+      "year": 2026,
+      "month": "March",
+      "month_number": 3,
+      "period": "2026-03",
+      "units": -55.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 4850.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4850.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 4850.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2026-04",
+      "utility": "Electricity",
+      "year": 2026,
+      "month": "April",
+      "month_number": 4,
+      "period": "2026-04",
+      "units": 14.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 938.0,
+      "society_charges": 10185.0,
+      "late_surcharge": 0.0,
+      "total_bill": 11123.0,
+      "charges": {
+        "Base Bill": 938.0,
+        "Society Charges": 10185.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2026-08",
+      "utility": "Electricity",
+      "year": 2026,
+      "month": "August",
+      "month_number": 8,
+      "period": "2026-08",
+      "units": 295.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 17995.0,
+      "society_charges": 4850.0,
+      "late_surcharge": 0.0,
+      "total_bill": 22845.0,
+      "charges": {
+        "Base Bill": 17995.0,
+        "Society Charges": 4850.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-12",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "December",
+      "month_number": 12,
+      "period": "2024-12",
+      "units": -62.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 4685.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4685.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 4685.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-10",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "October",
+      "month_number": 10,
+      "period": "2024-10",
+      "units": -168.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 6035.0,
+      "late_surcharge": 0.0,
+      "total_bill": 6035.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 6035.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-08",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "August",
+      "month_number": 8,
+      "period": "2024-08",
+      "units": -151.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 10766.0,
+      "late_surcharge": 0.0,
+      "total_bill": 10766.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 10766.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2026-02",
+      "utility": "Electricity",
+      "year": 2026,
+      "month": "February",
+      "month_number": 2,
+      "period": "2026-02",
+      "units": -56.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 4850.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4850.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 4850.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-11",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "November",
+      "month_number": 11,
+      "period": "2024-11",
+      "units": -9.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 5685.0,
+      "late_surcharge": 0.0,
+      "total_bill": 5685.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 5685.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-06",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "June",
+      "month_number": 6,
+      "period": "2025-06",
+      "units": 191.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 10314.0,
+      "society_charges": 4985.0,
+      "late_surcharge": 0.0,
+      "total_bill": 15299.0,
+      "charges": {
+        "Base Bill": 10314.0,
+        "Society Charges": 4985.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-09",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "September",
+      "month_number": 9,
+      "period": "2025-09",
+      "units": 92.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 5244.0,
+      "society_charges": 4950.0,
+      "late_surcharge": 0.0,
+      "total_bill": 10194.0,
+      "charges": {
+        "Base Bill": 5244.0,
+        "Society Charges": 4950.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2026-05",
+      "utility": "Electricity",
+      "year": 2026,
+      "month": "May",
+      "month_number": 5,
+      "period": "2026-05",
+      "units": 526.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 33664.0,
+      "society_charges": 4850.0,
+      "late_surcharge": 0.0,
+      "total_bill": 38514.0,
+      "charges": {
+        "Base Bill": 33664.0,
+        "Society Charges": 4850.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2026-01",
+      "utility": "Electricity",
+      "year": 2026,
+      "month": "January",
+      "month_number": 1,
+      "period": "2026-01",
+      "units": 175.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 11200.0,
+      "society_charges": 4850.0,
+      "late_surcharge": 0.0,
+      "total_bill": 16050.0,
+      "charges": {
+        "Base Bill": 11200.0,
+        "Society Charges": 4850.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-10",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "October",
+      "month_number": 10,
+      "period": "2025-10",
+      "units": 52.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 3328.0,
+      "society_charges": 4950.0,
+      "late_surcharge": 0.0,
+      "total_bill": 8278.0,
+      "charges": {
+        "Base Bill": 3328.0,
+        "Society Charges": 4950.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-11",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "November",
+      "month_number": 11,
+      "period": "2025-11",
+      "units": -58.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 4850.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4850.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 4850.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-01",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "January",
+      "month_number": 1,
+      "period": "2025-01",
+      "units": -30.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 4885.0,
+      "late_surcharge": 0.0,
+      "total_bill": 4885.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 4885.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-06",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "June",
+      "month_number": 6,
+      "period": "2024-06",
+      "units": 326.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 20538.0,
+      "society_charges": 2185.0,
+      "late_surcharge": 0.0,
+      "total_bill": 22723.0,
+      "charges": {
+        "Base Bill": 20538.0,
+        "Society Charges": 2185.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-12",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "December",
+      "month_number": 12,
+      "period": "2025-12",
+      "units": 103.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 6180.0,
+      "society_charges": 4850.0,
+      "late_surcharge": 0.0,
+      "total_bill": 11030.0,
+      "charges": {
+        "Base Bill": 6180.0,
+        "Society Charges": 4850.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-07",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "July",
+      "month_number": 7,
+      "period": "2024-07",
+      "units": 154.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 10626.0,
+      "society_charges": 2185.0,
+      "late_surcharge": 0.0,
+      "total_bill": 12811.0,
+      "charges": {
+        "Base Bill": 10626.0,
+        "Society Charges": 2185.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-03",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "March",
+      "month_number": 3,
+      "period": "2025-03",
+      "units": -59.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 5385.0,
+      "late_surcharge": 0.0,
+      "total_bill": 5385.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 5385.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-05",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "May",
+      "month_number": 5,
+      "period": "2024-05",
+      "units": -2837.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 2185.0,
+      "late_surcharge": 0.0,
+      "total_bill": 2185.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 2185.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2024-09",
+      "utility": "Electricity",
+      "year": 2024,
+      "month": "September",
+      "month_number": 9,
+      "period": "2024-09",
+      "units": -173.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 0.0,
+      "society_charges": 5692.0,
+      "late_surcharge": 0.0,
+      "total_bill": 5692.0,
+      "charges": {
+        "Base Bill": 0.0,
+        "Society Charges": 5692.0,
+        "Credit": 0.0
+      }
+    },
+    {
+      "id": "ELEC-2025-05",
+      "utility": "Electricity",
+      "year": 2025,
+      "month": "May",
+      "month_number": 5,
+      "period": "2025-05",
+      "units": 129.0,
+      "exported_units": null,
+      "credit": 0.0,
+      "base_bill": 7224.0,
+      "society_charges": 4985.0,
+      "late_surcharge": 0.0,
+      "total_bill": 12209.0,
+      "charges": {
+        "Base Bill": 7224.0,
+        "Society Charges": 4985.0,
+        "Credit": 0.0
+      }
+    }
+  ],
+  "monthly_summary": [
+    {
+      "period": "2024-05",
+      "year": 2024,
+      "month": "May",
+      "Electricity": 2185.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 2185.0
+    },
+    {
+      "period": "2024-06",
+      "year": 2024,
+      "month": "June",
+      "Electricity": 22723.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 22723.0
+    },
+    {
+      "period": "2024-07",
+      "year": 2024,
+      "month": "July",
+      "Electricity": 12811.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 12811.0
+    },
+    {
+      "period": "2024-08",
+      "year": 2024,
+      "month": "August",
+      "Electricity": 10766.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 10766.0
+    },
+    {
+      "period": "2024-09",
+      "year": 2024,
+      "month": "September",
+      "Electricity": 5692.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 5692.0
+    },
+    {
+      "period": "2024-10",
+      "year": 2024,
+      "month": "October",
+      "Electricity": 6035.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 6035.0
+    },
+    {
+      "period": "2024-11",
+      "year": 2024,
+      "month": "November",
+      "Electricity": 5685.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 5685.0
+    },
+    {
+      "period": "2024-12",
+      "year": 2024,
+      "month": "December",
+      "Electricity": 4685.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 4685.0
+    },
+    {
+      "period": "2025-01",
+      "year": 2025,
+      "month": "January",
+      "Electricity": 4885.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 4885.0
+    },
+    {
+      "period": "2025-03",
+      "year": 2025,
+      "month": "March",
+      "Electricity": 5385.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 5385.0
+    },
+    {
+      "period": "2025-05",
+      "year": 2025,
+      "month": "May",
+      "Electricity": 12209.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 12209.0
+    },
+    {
+      "period": "2025-06",
+      "year": 2025,
+      "month": "June",
+      "Electricity": 15299.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 15299.0
+    },
+    {
+      "period": "2025-09",
+      "year": 2025,
+      "month": "September",
+      "Electricity": 10194.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 10194.0
+    },
+    {
+      "period": "2025-10",
+      "year": 2025,
+      "month": "October",
+      "Electricity": 8278.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 8278.0
+    },
+    {
+      "period": "2025-11",
+      "year": 2025,
+      "month": "November",
+      "Electricity": 4850.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 4850.0
+    },
+    {
+      "period": "2025-12",
+      "year": 2025,
+      "month": "December",
+      "Electricity": 11030.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 11030.0
+    },
+    {
+      "period": "2026-01",
+      "year": 2026,
+      "month": "January",
+      "Electricity": 16050.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 16050.0
+    },
+    {
+      "period": "2026-02",
+      "year": 2026,
+      "month": "February",
+      "Electricity": 4850.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 4850.0
+    },
+    {
+      "period": "2026-03",
+      "year": 2026,
+      "month": "March",
+      "Electricity": 4850.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 4850.0
+    },
+    {
+      "period": "2026-04",
+      "year": 2026,
+      "month": "April",
+      "Electricity": 11123.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 11123.0
+    },
+    {
+      "period": "2026-05",
+      "year": 2026,
+      "month": "May",
+      "Electricity": 38514.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 38514.0
+    },
+    {
+      "period": "2026-08",
+      "year": 2026,
+      "month": "August",
+      "Electricity": 22845.0,
+      "Gas": 0,
+      "Water": 0,
+      "total": 22845.0
+    }
+  ]
 }

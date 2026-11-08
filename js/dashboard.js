@@ -9,7 +9,7 @@
 /* 01. CONFIGURATION */
 
 const CONFIG = {
-  demoMode: true,
+  demoMode: false,
   realDataPath: "data/bills.json",
   currency: "PKR",
   months: [
@@ -92,89 +92,6 @@ function changeLabel(value) {
   return `${Math.abs(value).toFixed(1)}% ${direction}`;
 }
 
-/* 03. DEMO DATA GENERATOR */
-
-function generateDemoData() {
-  const records = [];
-
-  // Deterministic values: refreshes won't change them.
-  for (const year of [2025, 2026]) {
-    for (let month = 1; month <= 12; month++) {
-      const seasonal = Math.sin((month - 3) * Math.PI / 6);
-      const growth = year === 2026 ? 1.13 : 1;
-
-      const electricityUnits = Math.round(
-        (310 + seasonal * 135 + month * 4) * growth
-      );
-
-      const electricityBase = Math.round(
-        electricityUnits * (37 + (year - 2025) * 5)
-      );
-
-      const electricitySociety = 1250 + month * 25;
-
-      records.push({
-        id: `ELEC-${year}-${String(month).padStart(2, "0")}`,
-        utility: "Electricity",
-        year,
-        month: CONFIG.months[month - 1],
-        month_number: month,
-        period: `${year}-${String(month).padStart(2, "0")}`,
-        units: electricityUnits,
-        base_bill: electricityBase,
-        society_charges: electricitySociety,
-        late_surcharge: 0,
-        total_bill: electricityBase + electricitySociety
-      });
-
-      const gasUnits = Math.round(
-        30 + 20 * Math.cos((month - 1) * Math.PI / 6)
-      );
-
-      const gasBase = Math.round(
-        (gasUnits * 34 + 1500) * growth
-      );
-
-      records.push({
-        id: `GAS-${year}-${String(month).padStart(2, "0")}`,
-        utility: "Gas",
-        year,
-        month: CONFIG.months[month - 1],
-        month_number: month,
-        period: `${year}-${String(month).padStart(2, "0")}`,
-        units: gasUnits,
-        base_bill: gasBase,
-        society_charges: 0,
-        late_surcharge: 0,
-        total_bill: gasBase
-      });
-
-      const waterUnits = Math.round(
-        17500 + 2500 * Math.sin(month * Math.PI / 6)
-      );
-
-      const waterBase = Math.round(
-        (2100 + waterUnits * 0.035) * growth
-      );
-
-      records.push({
-        id: `WATER-${year}-${String(month).padStart(2, "0")}`,
-        utility: "Water",
-        year,
-        month: CONFIG.months[month - 1],
-        month_number: month,
-        period: `${year}-${String(month).padStart(2, "0")}`,
-        units: waterUnits,
-        base_bill: waterBase,
-        society_charges: 0,
-        late_surcharge: 0,
-        total_bill: waterBase
-      });
-    }
-  }
-
-  return records;
-}
 
 /* 04. LOAD AND NORMALIZE DATA */
 
@@ -219,27 +136,29 @@ function normalizeBills(records) {
     .sort(byPeriod);
 }
 
-async function loadData() {
-  if (CONFIG.demoMode) {
-    return normalizeBills(generateDemoData());
-  }
 
+/* 04. LOAD REAL BILL DATA */
+
+async function loadData() {
   const response = await fetch(CONFIG.realDataPath, {
     cache: "no-store"
   });
 
   if (!response.ok) {
-    throw new Error(`Could not load bills: ${response.status}`);
+    throw new Error(
+      `Unable to load bills.json (HTTP ${response.status})`
+    );
   }
 
   const data = await response.json();
 
   if (!Array.isArray(data.bills)) {
-    throw new Error("Invalid bills.json structure");
+    throw new Error("Invalid bills.json: missing bills array");
   }
 
   return normalizeBills(data.bills);
 }
+
 
 /* 05. FILTERING */
 
